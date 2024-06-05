@@ -40,7 +40,6 @@ zinit snippet OMZP::golang
 zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::jsontools
 zinit snippet OMZP::thefuck
-zinit snippet OMZP::zoxide
 
 # load autocompletions
 autoload -U compinit && compinit
@@ -73,13 +72,7 @@ zstyle ':fzf-tab:complete:cd*' fzf-preview 'ls --color $realpath'
 # aliases
 alias ls='ls --color'
 
-ZOXIDE_CMD_OVERRIDE=cd
-
 # shell integrations
 eval "$(fzf --zsh)"
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
 eval $(thefuck --alias)
 eval $(thefuck --alias fuck)
-eval "$(zoxide init zsh)"
